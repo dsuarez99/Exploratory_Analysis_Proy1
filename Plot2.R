@@ -10,7 +10,7 @@ data$Date<-dmy(data$Date)
 data$Time<-hms(data$Time)
 data<-data[data$Date>=ymd("2007-02-01") & data$Date<=ymd("2007-02-02"),]
 
-#Plot 1
-png(filename = "Plot1.png", width = 480, height = 480)
-hist(data$Global_active_power,main = "Global Active Power",xlab = "Global Active Power (kilowatts)",col = "Red")
+#Plot 2
+png(filename = "Plot2.png", width = 480, height = 480)
+plot(data$DateTime,data$Global_active_power,type="l",xlab = "",ylab = "Global Active Power (kilowatts)",)
 dev.off()
